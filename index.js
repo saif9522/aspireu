@@ -140,7 +140,9 @@ function nativeSubmit() {
   HTMLFormElement.prototype.submit.call(form);
 }
 
-form.addEventListener('submit', async (e) => {
+const SUCCESS_MSG = 'Thank you! Your enquiry has been sent. Our counsellor will contact you shortly.';
+
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!form.checkValidity()) { form.reportValidity(); return; }
   if (form._honey.value) return; // bot trap
@@ -151,31 +153,45 @@ form.addEventListener('submit', async (e) => {
   }
 
   submitBtn.classList.add('loading');
-  showStatus('', '');
+  showStatus('', 'Sending your enquiry…');
 
   const data = Object.fromEntries(new FormData(form).entries());
   delete data._honey;
 
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/' + FORM_EMAIL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(data)
-    });
-    const json = await res.json().catch(() => ({}));
-    const msg = String(json.message || '');
-
-    if (res.ok && String(json.success) === 'true') {
-      showStatus('ok', 'Thank you! Your enquiry has been sent. Our counsellor will contact you shortly.');
-      form.reset();
-    } else if (/activat/i.test(msg)) {
-      showStatus('ok', 'Almost done! An activation email was sent to ' + FORM_EMAIL + '. Click "Activate Form" in it once, then enquiries will arrive automatically.');
-    } else {
-      throw new Error(msg || 'AJAX failed');
-    }
-  } catch (err) {
-    nativeSubmit(); // fallback: normal form post usually still gets through
-  } finally {
+  let settled = false;
+  const finish = (type, msg, reset) => {
+    if (settled) return;
+    settled = true;
     submitBtn.classList.remove('loading');
-  }
+    showStatus(type, msg);
+    if (reset) form.reset();
+  };
+
+  // The user never waits more than 5 seconds: if FormSubmit is slow, we show
+  // "Thank you" and the request keeps going in the background (keepalive).
+  const fastTimer = setTimeout(() => finish('ok', SUCCESS_MSG, true), 5000);
+
+  fetch('https://formsubmit.co/ajax/' + FORM_EMAIL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(data),
+    keepalive: true
+  })
+    .then((res) => res.json().catch(() => ({})).then((json) => ({ res, json })))
+    .then(({ res, json }) => {
+      clearTimeout(fastTimer);
+      const msg = String(json.message || '');
+      if (res.ok && String(json.success) === 'true') {
+        finish('ok', SUCCESS_MSG, true);
+      } else if (/activat/i.test(msg)) {
+        finish('ok', 'Almost done! An activation email was sent to ' + FORM_EMAIL + '. Click "Activate Form" in it once, then enquiries will arrive automatically.', false);
+      } else if (!settled) {
+        settled = true;
+        nativeSubmit(); // quick error → normal form post as backup
+      }
+    })
+    .catch(() => {
+      clearTimeout(fastTimer);
+      if (!settled) { settled = true; nativeSubmit(); }
+    });
 });

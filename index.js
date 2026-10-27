@@ -111,7 +111,8 @@ if ('IntersectionObserver' in window) {
    real web address (Vercel etc.), not by double-clicking index.html on a computer.
    The very first enquiry sends an "Activate Form" email to aspireu2026@gmail.com;
    click it once and every enquiry after that arrives in that inbox. */
-const FORM_EMAIL = 'aspireu2026@gmail.com';
+const FORM_EMAIL = 'aspireu2026@gmail.com';          // shown in messages
+const FORM_KEY = 'b1abe28685ef4c7c4ef48b87054fae9b'; // FormSubmit alias for aspireu2026@gmail.com (hides the email from spam bots)
 const form = document.getElementById('enquiryForm');
 const statusEl = form.querySelector('.form-status');
 const submitBtn = form.querySelector('.btn-submit');
@@ -171,7 +172,7 @@ form.addEventListener('submit', (e) => {
   // "Thank you" and the request keeps going in the background (keepalive).
   const fastTimer = setTimeout(() => finish('ok', SUCCESS_MSG, true), 5000);
 
-  fetch('https://formsubmit.co/ajax/' + FORM_EMAIL, {
+  fetch('https://formsubmit.co/ajax/' + FORM_KEY, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify(data),

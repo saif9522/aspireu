@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-label="Counsellor guiding a student at a desk">
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#12285a" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:'Space Grotesk',Arial,Helvetica,sans-serif}
+    .dot{animation:dot 1.4s ease-in-out infinite}
+    .d2{animation-delay:.2s}.d3{animation-delay:.4s}
+    .bubble{animation:pop 4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom left}
+    .bubble2{animation:pop 4s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:bottom right}
+    .float{animation:float 5s ease-in-out infinite}
+    .float2{animation:float 6s ease-in-out -3s infinite}
+    .tick{stroke-dasharray:24;stroke-dashoffset:24;animation:tick 4.5s ease-out infinite}
+    .t2{animation-delay:.6s}.t3{animation-delay:1.2s}
+    .screen{animation:blink 3s ease-in-out infinite}
+    .steam{animation:steam 2.5s ease-in-out infinite}
+    .nod{animation:nod 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+    @keyframes dot{0%,100%{opacity:.25}50%{opacity:1}}
+    @keyframes pop{0%,10%{transform:scale(.85);opacity:0}20%,85%{transform:scale(1);opacity:1}100%{transform:scale(.9);opacity:0}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes tick{0%,15%{stroke-dashoffset:24}35%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:24}}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.75}}
+    @keyframes steam{0%{transform:translateY(0);opacity:0}40%{opacity:.7}100%{transform:translateY(-14px);opacity:0}}
+    @keyframes nod{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.tick{stroke-dashoffset:0}}
+  </style>
+
+  <ellipse cx="300" cy="404" rx="270" ry="24" fill="#12285a" opacity=".08"/>
+
+  <!-- counsellor (left) -->
+  <rect x="104" y="226" width="14" height="118" rx="6" fill="#c9d5ea"/>
+  <rect x="104" y="320" width="86" height="12" rx="5" fill="#c9d5ea"/>
+  <rect x="112" y="332" width="8" height="66" fill="#b4c4e2"/>
+  <rect x="136" y="318" width="72" height="16" rx="8" fill="#0b1a3d"/>
+  <rect x="194" y="318" width="14" height="80" rx="6" fill="#0b1a3d"/>
+  <ellipse cx="208" cy="398" rx="14" ry="5" fill="#0b1a3d"/>
+  <path d="M128 244 Q148 224 172 238 L178 324 L130 324 Z" fill="#12285a"/>
+  <path d="M150 232 L158 256 L166 236 Z" fill="#ffffff"/>
+  <path d="M168 252 Q200 282 236 292" fill="none" stroke="#12285a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="238" cy="292" r="7" fill="#e3ad85"/>
+  <g class="nod">
+    <rect x="146" y="214" width="12" height="14" rx="4" fill="#e3ad85"/>
+    <circle cx="152" cy="200" r="20" fill="#e3ad85"/>
+    <circle cx="134" cy="186" r="10" fill="#2b1d14"/>
+    <path d="M132 200 Q132 178 152 178 Q172 178 172 196 Q160 188 146 192 Q138 196 132 200 Z" fill="#2b1d14"/>
+    <circle cx="162" cy="202" r="2.2" fill="#2b1d14"/>
+    <path d="M160 211 Q165 214 169 210" fill="none" stroke="#2b1d14" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- student (right) -->
+  <rect x="482" y="226" width="14" height="118" rx="6" fill="#c9d5ea"/>
+  <rect x="410" y="320" width="86" height="12" rx="5" fill="#c9d5ea"/>
+  <rect x="480" y="332" width="8" height="66" fill="#b4c4e2"/>
+  <rect x="392" y="318" width="72" height="16" rx="8" fill="#163a80"/>
+  <rect x="392" y="318" width="14" height="80" rx="6" fill="#163a80"/>
+  <ellipse cx="392" cy="398" rx="14" ry="5" fill="#0b1a3d"/>
+  <path d="M428 238 Q452 224 472 244 L470 324 L422 324 Z" fill="#33b8e8"/>
+  <path d="M432 252 Q400 282 366 292" fill="none" stroke="#33b8e8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="364" cy="292" r="7" fill="#f1c7a0"/>
+  <rect x="442" y="214" width="12" height="14" rx="4" fill="#f1c7a0"/>
+  <circle cx="448" cy="200" r="20" fill="#f1c7a0"/>
+  <path d="M428 198 Q428 178 448 178 Q470 178 468 200 Q462 186 448 188 Q436 188 428 198 Z" fill="#2b1d14"/>
+  <circle cx="438" cy="202" r="2.2" fill="#2b1d14"/>
+  <path d="M431 211 Q435 214 440 210" fill="none" stroke="#2b1d14" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- desk -->
+  <g filter="url(#sh)">
+    <rect x="120" y="298" width="360" height="14" rx="6" fill="#12285a"/>
+  </g>
+  <rect x="140" y="312" width="10" height="88" fill="#0b1a3d"/>
+  <rect x="450" y="312" width="10" height="88" fill="#0b1a3d"/>
+
+  <!-- laptop -->
+  <rect x="262" y="222" width="100" height="70" rx="6" fill="#0b1a3d"/>
+  <rect class="screen" x="268" y="228" width="88" height="58" rx="3" fill="#33b8e8"/>
+  <polygon points="312,240 330,248 312,256 294,248" fill="#ffffff"/>
+  <rect x="284" y="264" width="56" height="5" rx="2.5" fill="#ffffff" opacity=".8"/>
+  <rect x="292" y="274" width="40" height="5" rx="2.5" fill="#ffffff" opacity=".6"/>
+  <rect x="248" y="291" width="128" height="8" rx="3" fill="#c9d5ea"/>
+
+  <!-- mug + books -->
+  <rect x="392" y="274" width="22" height="24" rx="4" fill="#f28c1c"/>
+  <path d="M414 280 Q424 284 414 292" fill="none" stroke="#f28c1c" stroke-width="3"/>
+  <path class="steam" d="M398 266 Q394 258 400 252" fill="none" stroke="#5b6785" stroke-width="2" stroke-linecap="round"/>
+  <path class="steam" style="animation-delay:-1.2s" d="M408 266 Q404 258 410 252" fill="none" stroke="#5b6785" stroke-width="2" stroke-linecap="round"/>
+  <rect x="176" y="282" width="56" height="9" rx="2" fill="#33b8e8"/>
+  <rect x="180" y="273" width="50" height="9" rx="2" fill="#f28c1c"/>
+
+  <!-- speech bubbles -->
+  <g class="bubble" filter="url(#sh)">
+    <rect x="112" y="108" width="104" height="48" rx="16" fill="#ffffff"/>
+    <path d="M136 154 L130 172 L152 154 Z" fill="#ffffff"/>
+    <circle class="dot" cx="144" cy="132" r="5" fill="#12285a"/>
+    <circle class="dot d2" cx="164" cy="132" r="5" fill="#12285a"/>
+    <circle class="dot d3" cx="184" cy="132" r="5" fill="#12285a"/>
+  </g>
+  <g class="bubble2" filter="url(#sh)">
+    <rect x="350" y="112" width="118" height="44" rx="16" fill="#f28c1c"/>
+    <path d="M444 154 L452 170 L430 154 Z" fill="#f28c1c"/>
+    <text x="409" y="139" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Which college?</text>
+  </g>
+
+  <!-- checklist -->
+  <g class="float" filter="url(#sh)">
+    <rect x="490" y="40" width="98" height="128" rx="10" fill="#ffffff"/>
+    <rect x="520" y="32" width="38" height="14" rx="5" fill="#12285a"/>
+    <g fill="none" stroke="#c9d5ea" stroke-width="2"><rect x="502" y="70" width="14" height="14" rx="3"/><rect x="502" y="100" width="14" height="14" rx="3"/><rect x="502" y="130" width="14" height="14" rx="3"/></g>
+    <g fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path class="tick" d="M504 77 L508 81 L515 72"/>
+      <path class="tick t2" d="M504 107 L508 111 L515 102"/>
+      <path class="tick t3" d="M504 137 L508 141 L515 132"/>
+    </g>
+    <g fill="#dbe4f4"><rect x="524" y="74" width="52" height="6" rx="3"/><rect x="524" y="104" width="44" height="6" rx="3"/><rect x="524" y="134" width="50" height="6" rx="3"/></g>
+  </g>
+
+  <!-- floating cap -->
+  <g class="float2" filter="url(#sh)">
+    <circle cx="60" cy="96" r="30" fill="#ffffff"/>
+    <polygon points="38,94 60,84 82,94 60,104" fill="#12285a"/>
+    <path d="M48 98 L48 106 Q60 112 72 106 L72 98" fill="#1f5fbf"/>
+    <path d="M60 94 L78 98 L78 110" fill="none" stroke="#f28c1c" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+</svg>

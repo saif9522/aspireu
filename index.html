@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspireU | Admissions & Career Guidance</title>
+    <meta name="description" content="AspireU Services, an initiative of Captivo Insights: free career counselling, course selection, admission guidance and placement assistance. Partnered with India's leading universities and colleges. Free counselling: +91 63960 13830.">
+    <meta name="theme-color" content="#12285a">
+    <link rel="icon" type="image/png" href="./aspireu-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- ================= PAGE LOADER ================= -->
+    <div id="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <img src="./aspireu-logo.png" alt="">
+            <div class="loader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- scroll progress -->
+    <div id="progress"></div>
+
+    <!-- ================= SECTION 1 : NAV + HERO ================= -->
+    <section>
+        <div class="container-fluid sec1 gx-0 gy-0">
+            <div class="background-image">
+                <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+                <span class="bubble b4"></span><span class="bubble b5"></span>
+
+                <div class="container-fluid navbaar" id="navbar">
+                    <nav class="d-flex nav-bar container justify-content-between">
+                        <a href="#" class="logo-parent">
+                            <img src="./aspireu-logo.png" class="logo" alt="AspireU">
+                        </a>
+                        <div class="navlistparent d-flex justify-content-end">
+                            <div class="navdiv1">
+                                <ul class="d-flex list">
+                                    <li><a href="#about" class="list1">About</a></li>
+                                    <li><a href="#services" class="list1">What We Do</a></li>
+                                    <li><a href="#partners" class="list1">Partners</a></li>
+                                    <li><a href="#ceo" class="list1">Our CEO</a></li>
+                                    <li><a href="#Contact" class="list1">Contact Us</a></li>
+                                    <li><a href="tel:+916396013830" class="nav-cta"><i class="fa-solid fa-phone me-2"></i>63960 13830</a></li>
+                                </ul>
+                            </div>
+                            <div class="navdiv2">
+                                <button class="btn menubtn" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-label="Open menu">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                                    aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasRightLabel">MENU</h5>
+                                        <button type="button" class="buttonclose" data-bs-dismiss="offcanvas"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="list">
+                                            <li><a href="#about" class="list1" data-bs-dismiss="offcanvas">About</a></li>
+                                            <li><a href="#services" class="list1" data-bs-dismiss="offcanvas">What We Do</a></li>
+                                            <li><a href="#partners" class="list1" data-bs-dismiss="offcanvas">Partners</a></li>
+                                            <li><a href="#ceo" class="list1" data-bs-dismiss="offcanvas">Our CEO</a></li>
+                                            <li><a href="#Contact" class="list1" data-bs-dismiss="offcanvas">Contact Us</a></li>
+                                            <li><a href="tel:+916396013830" class="list1"><i class="fa-solid fa-phone me-2"></i>63960 13830</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="sect1 outer">
+                    <div class="hero-row">
+                        <div class="sec1div1">
+                            <p class="eyebrow hero-in" style="--d:.1s">AN INITIATIVE OF CAPTIVO INSIGHTS</p>
+                            <p class="hero-title hero-in" style="--d:.25s">AT <span class="orangetext shimmer">ASPIREU</span>, EVERY STUDENT'S DREAM BECOMES
+                                <span class="ml11"><span class="text-wrapper"><span class="letters bluetext">ADMISSION</span></span></span>
+                            </p>
+                            <p class="hero-sub hero-in" style="--d:.4s">Free career counselling, course selection, admission guidance and placement assistance for students and working professionals.</p>
+                            <div class="hero-btns hero-in" style="--d:.55s">
+                                <a href="#Contact" class="btn1">Get Free Counselling <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                                <a href="https://wa.me/916396013830?text=Hi%20AspireU%2C%20I%20want%20admission%20guidance." class="btn2" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Us</a>
+                            </div>
+                            <ul class="hero-chips hero-in" style="--d:.7s">
+                                <li><i class="fa-solid fa-circle-check"></i>Free Counselling</li>
+                                <li><i class="fa-solid fa-circle-check"></i>Placement Assistance</li>
+                                <li><i class="fa-solid fa-circle-check"></i>10+ Partner Colleges</li>
+                            </ul>
+                        </div>
+                        <div class="hero-art hero-in" style="--d:.35s">
+                            <img src="./images/hero.svg" alt="Graduate student celebrating on a stack of books with a rising arrow">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#stats" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+            </div>
+        </div>
+
+        <div class="container" id="stats">
+            <div class="lastdivs d-flex justify-content-between mt-5 text-center">
+                <div class="ld1 first" data-reveal="up">GUIDED BY <p class="orangetext1" data-count="1">1</p> DEDICATED TEAM</div>
+                <div class="ld1" data-reveal="up" style="--d:.15s">PARTNERED WITH<br>
+                    <p class="orangetext1" data-count="10" data-suffix="+">10+</p> TOP INSTITUTIONS
+                </div>
+                <div class="ld1 lastdiv" data-reveal="up" style="--d:.3s">SERVING STUDENTS<br>ACROSS
+                    <p class="orangetext1">PAN</p> INDIA
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 2 : WHO ARE WE ================= -->
+    <section id="about">
+        <div class="row gx-0">
+            <div class="col-lg-6">
+                <div class="image1 art art-navy" data-reveal="left">
+                    <img class="illus" data-src="./images/about.svg" alt="University campus with students walking in">
+                </div>
+            </div>
+            <div class="col-lg-6 textdiv divafter d-flex justify-content-center align-items-center flex-column">
+                <div class="parentdiv" data-reveal="right">
+                    <p class="section-eyebrow">ABOUT ASPIREU SERVICES</p>
+                    <p class="heading">WHO ARE WE <span class="textred">?</span></p>
+                    <p class="textdivp">At AspireU Services, we believe every individual deserves the right guidance to build a
+                        successful future. We empower students and working professionals to make confident decisions through
+                        personalized career counselling, course selection, admission guidance, and placement assistance.</p>
+                    <p class="textdivp mt-3">Our mission is to simplify career choices, unlock opportunities, and guide you toward
+                        the right path. With free counselling sessions and placement assistance, we are committed to making
+                        career guidance accessible to everyone.</p>
+                    <p class="tagline"><i class="fa-solid fa-quote-left"></i> Your Aspirations, Our Guidance. Your Future, Our Commitment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 3 : WHAT WE DO ================= -->
+    <section id="services">
+        <div class="row gx-0 mainparent">
+            <div class="col-lg-6 textdiv divbefore d-flex justify-content-center align-items-end flex-column">
+                <div class="parentdiv ms-5" data-reveal="left">
+                    <p class="heading">WHAT WE DO <span class="textred">?</span></p>
+                    <p class="textdivp">We guide students and working professionals at every step, from picking the right
+                        course to securing admission and landing the right job.</p>
+                    <ul class="service-list">
+                        <li data-reveal="up" style="--d:.1s"><i class="fa-solid fa-check"></i>Personalized career counselling</li>
+                        <li data-reveal="up" style="--d:.2s"><i class="fa-solid fa-check"></i>Course selection</li>
+                        <li data-reveal="up" style="--d:.3s"><i class="fa-solid fa-check"></i>Admission guidance</li>
+                        <li data-reveal="up" style="--d:.4s"><i class="fa-solid fa-check"></i>Placement assistance</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="image1 art art-orange" data-reveal="right">
+                    <img class="illus" data-src="./images/services.svg" alt="Counsellor guiding a student at a desk">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 4 : WHY US ================= -->
+    <section>
+        <div class="row gx-0">
+            <div class="col-lg-6">
+                <div class="image1 art art-sky" data-reveal="left">
+                    <img class="illus" data-src="./images/why.svg" alt="Rising growth chart with a trophy">
+                </div>
+            </div>
+            <div class="col-lg-6 textdiv divafter d-flex justify-content-center align-items-center flex-column">
+                <div class="parentdiv" data-reveal="right">
+                    <p class="heading">WHY US <span class="textred">?</span></p>
+                    <p class="textdivp">Free counselling sessions, direct partnerships with 10+ leading institutions, honest one-on-one guidance,
+                        and placement assistance that stays with you beyond admission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 5 : OUR PARTNERS HEADING ================= -->
+    <section id="partners">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container ourclients">
+                    <div class="text1" data-reveal="zoom">
+                        <div class="wrapper"><div class="letter">O</div><div class="shadow">O</div></div>
+                        <div class="wrapper"><div class="letter">U</div><div class="shadow">U</div></div>
+                        <div class="wrapper gap-after"><div class="letter">R</div><div class="shadow">R</div></div>
+                        <div class="wrapper"><div class="letter">P</div><div class="shadow">P</div></div>
+                        <div class="wrapper"><div class="letter">A</div><div class="shadow">A</div></div>
+                        <div class="wrapper"><div class="letter">R</div><div class="shadow">R</div></div>
+                        <div class="wrapper"><div class="letter">T</div><div class="shadow">T</div></div>
+                        <div class="wrapper"><div class="letter">N</div><div class="shadow">N</div></div>
+                        <div class="wrapper"><div class="letter">E</div><div class="shadow">E</div></div>
+                        <div class="wrapper"><div class="letter">R</div><div class="shadow">R</div></div>
+                        <div class="wrapper"><div class="letter">S</div><div class="shadow">S</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- infinite scrolling strip -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Haridwar University</span><span>GNIOT Group of Institutions</span><span>IIMT University</span>
+                <span>Bareilly International University</span><span>IIMT College</span><span>IEC College</span>
+                <span>GLA University</span><span>GL Bajaj</span><span>Mangalmay Group of Institutions</span><span>Sanskriti University</span>
+                <span>Haridwar University</span><span>GNIOT Group of Institutions</span><span>IIMT University</span>
+                <span>Bareilly International University</span><span>IIMT College</span><span>IEC College</span>
+                <span>GLA University</span><span>GL Bajaj</span><span>Mangalmay Group of Institutions</span><span>Sanskriti University</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 6 : PARTNER GRID ================= -->
+    <!-- Partner logos live in ./images/partners/ — Bareilly International University still uses initials (no logo supplied) -->
+    <section class="pb-5">
+        <div class="container-fluid bgcolour">
+            <div class="container">
+                <div class="row partner-grid row-cols-2 row-cols-md-3 row-cols-lg-5">
+                    <div class="col p-2" data-reveal="up" style="--d:0.00s"><div class="partner"><span class="logo-box"><img src="./images/partners/haridwar-university.jpg" alt="Haridwar University logo" loading="lazy"></span><span class="pname">Haridwar University</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>HARIDWAR UNIVERSITY</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.08s"><div class="partner"><span class="logo-box"><img src="./images/partners/gniot.jpg" alt="GNIOT Group of Institutions logo" loading="lazy"></span><span class="pname">GNIOT Group of Institutions</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>GNIOT GROUP OF INSTITUTIONS</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.16s"><div class="partner"><span class="logo-box"><img src="./images/partners/iimt-university.jpg" alt="IIMT University logo" loading="lazy"></span><span class="pname">IIMT University</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>IIMT UNIVERSITY</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.24s"><div class="partner"><span class="mono">BIU</span><span class="pname">Bareilly International University</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>BAREILLY INTERNATIONAL UNIVERSITY</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.32s"><div class="partner"><span class="logo-box"><img src="./images/partners/iimt-college.jpg" alt="IIMT College logo" loading="lazy"></span><span class="pname">IIMT College</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>IIMT COLLEGE</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.00s"><div class="partner"><span class="logo-box"><img src="./images/partners/iec-college.jpg" alt="IEC College logo" loading="lazy"></span><span class="pname">IEC College</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>IEC COLLEGE</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.08s"><div class="partner"><span class="logo-box"><img src="./images/partners/gla-university.jpg" alt="GLA University logo" loading="lazy"></span><span class="pname">GLA University</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>GLA UNIVERSITY</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.16s"><div class="partner"><span class="logo-box"><img src="./images/partners/gl-bajaj.jpg" alt="GL Bajaj logo" loading="lazy"></span><span class="pname">GL Bajaj</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>GL BAJAJ</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.24s"><div class="partner"><span class="logo-box"><img src="./images/partners/mangalmay.jpg" alt="Mangalmay Group of Institutions logo" loading="lazy"></span><span class="pname">Mangalmay Group of Institutions</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>MANGALMAY GROUP OF INSTITUTIONS</p></div></div></div></div>
+                    <div class="col p-2" data-reveal="up" style="--d:0.32s"><div class="partner"><span class="logo-box"><img src="./images/partners/sanskriti-university.jpg" alt="Sanskriti University logo" loading="lazy"></span><span class="pname">Sanskriti University</span><div class="overlay"><div class="text"><i class="fa-solid fa-graduation-cap"></i><p>SANSKRITI UNIVERSITY</p></div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 6.5 : OUR CEO ================= -->
+    <section id="ceo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container ourclients ourclients-sm">
+                    <div class="text1" data-reveal="zoom">
+                        <div class="wrapper"><div class="letter">O</div><div class="shadow">O</div></div>
+                        <div class="wrapper"><div class="letter">U</div><div class="shadow">U</div></div>
+                        <div class="wrapper gap-after"><div class="letter">R</div><div class="shadow">R</div></div>
+                        <div class="wrapper"><div class="letter">C</div><div class="shadow">C</div></div>
+                        <div class="wrapper"><div class="letter">E</div><div class="shadow">E</div></div>
+                        <div class="wrapper"><div class="letter">O</div><div class="shadow">O</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-5">
+            <div class="ceo-card">
+                <div class="ceo-photo" data-reveal="left">
+                    <div class="ceo-frame">
+                        <img src="./images/team/ceo.jpg" alt="Salvi Rajawat, Founder &amp; CEO of AspireU" loading="lazy">
+                    </div>
+                    <span class="ceo-badge"><i class="fa-solid fa-award"></i> Founder &amp; CEO</span>
+                </div>
+                <div class="ceo-text" data-reveal="right">
+                    <p class="section-eyebrow">MESSAGE FROM OUR CEO</p>
+                    
+                    <h3 class="ceo-name">Salvi Rajawat</h3>
+                    <p class="ceo-role">Founder &amp; CEO, AspireU Services</p>
+                    <blockquote class="ceo-quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        Every individual deserves the right guidance to build a successful future. At AspireU, our goal is to
+                        simplify career choices and make quality guidance accessible to every student and working professional.
+                    </blockquote>
+                    <p class="ceo-sign">Your Aspirations, Our Guidance. Your Future, Our Commitment.</p>
+                    <div class="ceo-actions">
+                        <a href="#Contact" class="btn1">Book Free Counselling <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION 7 : CONTACT ================= -->
+    <section id="Contact">
+        <div class="container-fluid gx-0">
+            <div class="backgroundimagesec9">
+                <span class="bubble b2"></span><span class="bubble b4"></span>
+                <div class="outer">
+                    <div class="row gx-0">
+                        <div class="col-lg-5 col-md-12 sec9div1 d-flex flex-column justify-content-center" data-reveal="left">
+                            <p class="contact-eyebrow">TAKE THE FIRST STEP</p>
+                            <h2 class="contact-heading">Your university journey starts with one conversation.</h2>
+                            <ul class="contact-info">
+                                <li><i class="fa-solid fa-phone"></i><a href="tel:+916396013830">+91 63960 13830</a></li>
+                                <li><i class="fa-solid fa-envelope"></i><a href="mailto:aspireu02026@gmail.com">aspireu02026@gmail.com</a></li>
+                                <li><i class="fa-solid fa-location-dot"></i><a href="https://www.google.com/maps/search/?api=1&query=Astralis+Supertech+Business+Centre+Supernova+Sector+94+Noida" target="_blank" rel="noopener">Supernova Building, Sector 94, Noida</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 sec9div2" data-reveal="right">
+                            <div class="form-container">
+                                <h2 class="text-center fw-bold">GET IN TOUCH</h2>
+                                <!-- Every submission is emailed to aspireu02026@gmail.com via FormSubmit -->
+                                <form id="enquiryForm" action="https://formsubmit.co/aspireu02026@gmail.com" method="POST">
+                                    <input type="hidden" name="_subject" value="New enquiry from AspireU website">
+                                    <input type="hidden" name="_template" value="table">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off">
+                                    <div class="form-group mb-2 fw-bolder">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="name" name="Name" required>
+                                    </div>
+                                    <div class="form-group mb-2 fw-bolder">
+                                        <label for="phone">Mobile Number:</label>
+                                        <input type="tel" class="form-control" id="phone" name="Mobile"
+                                            title="Enter a 10-digit mobile number" pattern="[6-9][0-9]{9}" maxlength="10" required>
+                                    </div>
+                                    <div class="form-group mb-2 fw-bolder">
+                                        <label for="email">E-Mail:</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group mb-2 fw-bolder">
+                                        <label for="course">Course of Interest:</label>
+                                        <input type="text" class="form-control" id="course" name="Course" placeholder="e.g. B.Tech, MBA, BBA">
+                                    </div>
+                                    <div class="form-group mb-4 fw-bolder">
+                                        <label for="message">Message:</label>
+                                        <textarea class="form-control" id="message" name="Message" rows="3" required></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-submit w-50"><span class="btn-label">Submit</span><span class="spinner" aria-hidden="true"></span></button>
+                                    </div>
+                                    <p class="form-status" role="status" aria-live="polite"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container-fluid">
+            <div class="footer container mt-4">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-2 col-lg-6 col-md-12 mb-3">
+                        <a href="https://wa.me/916396013830" class="iconlink" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp footicon wa"></i></a>
+                        <a href="tel:+916396013830" class="iconlink" aria-label="Call"><i class="fa-solid fa-phone footicon"></i></a>
+                        <a href="mailto:aspireu02026@gmail.com" class="iconlink" aria-label="Email"><i class="fa-solid fa-envelope footicon"></i></a>
+                    </div>
+                    <div class="footer-links col-xl-4 col-lg-6 col-md-12 mb-3">
+                        <a href="mailto:aspireu02026@gmail.com" class="footerlink"><i class="fa-solid fa-envelope me-2"></i>Mail Us</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Astralis+Supertech+Business+Centre+Supernova+Sector+94+Noida"
+                            class="footerlink" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot me-2"></i>Location</a>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 mb-3">
+                        <p><i class="fa-solid fa-building me-2"></i>Office #940, Astralis Supertech Business Centre,
+                            Supernova, Plot No. 3, Sector 94, Noida, Uttar Pradesh 201313</p>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between flex-wrap mb-3 footer-bottom">
+                        <p>&copy; 2026 ASPIREU &middot; An initiative of CAPTIVO INSIGHTS PVT. LTD.</p>
+                        <p>Plus Code: H82F+HR9</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- floating buttons -->
+    <a href="https://wa.me/916396013830?text=Hi%20AspireU%2C%20I%20want%20admission%20guidance." class="fab-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

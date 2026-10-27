@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-label="University campus with students walking in">
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#12285a" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="ped" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f5fbf"/><stop offset="1" stop-color="#12285a"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text{font-family:'Space Grotesk',Arial,Helvetica,sans-serif}
+    .cloud{animation:drift 14s ease-in-out infinite}
+    .cloud2{animation:drift 18s ease-in-out -6s infinite}
+    .flag{animation:flag 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
+    .walk{animation:walk 1.1s ease-in-out infinite}
+    .walk2{animation:walk 1.1s ease-in-out -.5s infinite}
+    .pin{animation:bounce 2.4s ease-in-out infinite}
+    .sun{animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .leaf{animation:sway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+    @keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(30px)}}
+    @keyframes flag{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(6deg) scaleX(.9)}}
+    @keyframes walk{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+    @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:.35}50%{transform:scale(1.12);opacity:.5}}
+    @keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <circle class="sun" cx="470" cy="96" r="44" fill="#f28c1c"/>
+  <g class="cloud" fill="#ffffff">
+    <ellipse cx="120" cy="90" rx="46" ry="16"/><circle cx="104" cy="82" r="18"/><circle cx="132" cy="76" r="22"/>
+  </g>
+  <g class="cloud2" fill="#ffffff" opacity=".9">
+    <ellipse cx="400" cy="150" rx="36" ry="12"/><circle cx="390" cy="143" r="14"/><circle cx="412" cy="139" r="17"/>
+  </g>
+
+  <ellipse cx="300" cy="408" rx="280" ry="26" fill="#12285a" opacity=".08"/>
+
+  <!-- trees -->
+  <g class="leaf">
+    <rect x="72" y="320" width="12" height="80" rx="4" fill="#7a4e2d"/>
+    <circle cx="78" cy="300" r="40" fill="#2f9e6a"/><circle cx="58" cy="318" r="24" fill="#3bb57a"/><circle cx="100" cy="316" r="26" fill="#3bb57a"/>
+  </g>
+  <g class="leaf">
+    <rect x="518" y="326" width="12" height="74" rx="4" fill="#7a4e2d"/>
+    <circle cx="524" cy="306" r="36" fill="#2f9e6a"/><circle cx="504" cy="322" r="22" fill="#3bb57a"/><circle cx="546" cy="320" r="24" fill="#3bb57a"/>
+  </g>
+
+  <!-- building -->
+  <g filter="url(#sh)">
+    <rect x="150" y="236" width="300" height="146" fill="#ffffff"/>
+    <polygon points="128,236 300,150 472,236" fill="url(#ped)"/>
+    <polygon points="170,228 300,166 430,228" fill="#1f5fbf" opacity=".55"/>
+    <rect x="138" y="228" width="324" height="16" rx="3" fill="#0b1a3d"/>
+  </g>
+  <circle cx="300" cy="204" r="16" fill="#f28c1c"/>
+  <text x="300" y="210" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">U</text>
+  <g fill="#e3eaf7">
+    <rect x="168" y="250" width="22" height="130"/><rect x="214" y="250" width="22" height="130"/>
+    <rect x="364" y="250" width="22" height="130"/><rect x="410" y="250" width="22" height="130"/>
+  </g>
+  <g fill="#c9d5ea">
+    <rect x="164" y="246" width="30" height="8" rx="2"/><rect x="210" y="246" width="30" height="8" rx="2"/>
+    <rect x="360" y="246" width="30" height="8" rx="2"/><rect x="406" y="246" width="30" height="8" rx="2"/>
+  </g>
+  <rect x="254" y="264" width="92" height="22" rx="4" fill="#12285a"/>
+  <text x="300" y="280" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">CAMPUS</text>
+  <path d="M276 382 L276 330 Q300 300 324 330 L324 382 Z" fill="#f28c1c"/>
+  <rect x="130" y="380" width="340" height="10" rx="2" fill="#c9d5ea"/>
+  <rect x="114" y="390" width="372" height="10" rx="2" fill="#b4c4e2"/>
+
+  <!-- flag -->
+  <line x1="300" y1="150" x2="300" y2="104" stroke="#0b1a3d" stroke-width="3"/>
+  <path class="flag" d="M301 106 L334 112 L301 126 Z" fill="#f28c1c"/>
+
+  <!-- student 1 (orange backpack) -->
+  <g class="walk">
+    <rect x="200" y="368" width="9" height="34" rx="4" fill="#0b1a3d"/>
+    <rect x="212" y="368" width="9" height="34" rx="4" fill="#0b1a3d"/>
+    <rect x="190" y="326" width="18" height="34" rx="6" fill="#f28c1c"/>
+    <path d="M196 330 Q210 318 224 330 L226 372 L196 372 Z" fill="#33b8e8"/>
+    <circle cx="210" cy="312" r="13" fill="#f1c7a0"/>
+    <path d="M197 312 Q197 297 210 297 Q224 297 223 312 Q216 304 210 305 Q203 304 197 312 Z" fill="#2b1d14"/>
+    <rect x="216" y="340" width="16" height="22" rx="3" fill="#ffffff" stroke="#c9d5ea"/>
+  </g>
+  <!-- student 2 (navy backpack, ponytail) -->
+  <g class="walk2">
+    <rect x="378" y="368" width="9" height="34" rx="4" fill="#12285a"/>
+    <rect x="390" y="368" width="9" height="34" rx="4" fill="#12285a"/>
+    <rect x="400" y="326" width="18" height="34" rx="6" fill="#12285a"/>
+    <path d="M374 330 Q388 318 402 330 L404 372 L372 372 Z" fill="#f28c1c"/>
+    <circle cx="388" cy="312" r="13" fill="#e3ad85"/>
+    <path d="M375 312 Q375 297 388 297 Q402 297 401 312 Q394 304 388 305 Q381 304 375 312 Z" fill="#3a2418"/>
+    <path d="M400 304 Q414 310 408 326" fill="none" stroke="#3a2418" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- location pin -->
+  <g class="pin" filter="url(#sh)">
+    <path d="M540 196 C540 172 510 172 510 196 C510 214 525 228 525 228 C525 228 540 214 540 196 Z" fill="#f28c1c"/>
+    <circle cx="525" cy="194" r="7" fill="#ffffff"/>
+  </g>
+  <g filter="url(#sh)">
+    <rect x="478" y="238" width="94" height="30" rx="15" fill="#ffffff"/>
+    <text x="525" y="258" font-size="13" font-weight="700" fill="#12285a" text-anchor="middle">Pan India</text>
+  </g>
+</svg>

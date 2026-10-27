@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-label="Rising growth chart with a trophy and tossed graduation caps">
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#12285a" flood-opacity=".2"/>
+    </filter>
+    <linearGradient id="b1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f5fbf"/><stop offset="1" stop-color="#12285a"/></linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#33b8e8"/><stop offset="1" stop-color="#1f5fbf"/></linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6b14f"/><stop offset="1" stop-color="#f28c1c"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#f28c1c"/></linearGradient>
+  </defs>
+  <style>
+    text{font-family:'Space Grotesk',Arial,Helvetica,sans-serif}
+    .bar{animation:grow 1.4s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:bottom center}
+    .g2{animation-delay:.2s}.g3{animation-delay:.4s}.g4{animation-delay:.6s}
+    .draw{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s ease-out 1s forwards}
+    .pop{animation:pop .5s cubic-bezier(.3,1.6,.5,1) 2.4s both;transform-box:fill-box;transform-origin:center}
+    .toss{animation:toss 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .toss2{animation:toss 3.2s ease-in-out -1.4s infinite;transform-box:fill-box;transform-origin:center}
+    .shine{animation:tw 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .shine2{animation:tw 2.8s ease-in-out -1s infinite;transform-box:fill-box;transform-origin:center}
+    .float{animation:float 5s ease-in-out infinite}
+    .float2{animation:float 6s ease-in-out -2s infinite}
+    .conf{animation:fall 4s linear infinite}
+    @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+    @keyframes toss{0%,100%{transform:translateY(0) rotate(-10deg)}50%{transform:translateY(-34px) rotate(14deg)}}
+    @keyframes tw{0%,100%{opacity:.3;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes fall{0%{transform:translateY(-20px);opacity:0}15%{opacity:1}100%{transform:translateY(120px);opacity:0}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0}}
+  </style>
+
+  <ellipse cx="300" cy="402" rx="270" ry="24" fill="#12285a" opacity=".08"/>
+  <line x1="90" y1="380" x2="400" y2="380" stroke="#b4c4e2" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- bars -->
+  <rect class="bar" x="110" y="320" width="48" height="60" rx="8" fill="url(#b1)"/>
+  <rect class="bar g2" x="178" y="280" width="48" height="100" rx="8" fill="url(#b1)"/>
+  <rect class="bar g3" x="246" y="230" width="48" height="150" rx="8" fill="url(#b2)"/>
+  <rect class="bar g4" x="314" y="170" width="48" height="210" rx="8" fill="url(#b3)"/>
+
+  <!-- trend arrow -->
+  <path class="draw" d="M100 300 L190 250 L250 268 L370 128" fill="none" stroke="#12285a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="pop" points="384,110 386,142 358,128" fill="#12285a"/>
+
+  <!-- trophy -->
+  <g filter="url(#sh)">
+    <path d="M436 230 Q412 230 412 252 Q412 274 440 278" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M520 230 Q544 230 544 252 Q544 274 516 278" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M430 220 L526 220 L520 268 Q512 300 478 304 Q444 300 436 268 Z" fill="url(#gold)"/>
+    <rect x="470" y="302" width="16" height="28" fill="#f28c1c"/>
+    <rect x="448" y="328" width="60" height="14" rx="4" fill="#12285a"/>
+    <rect x="438" y="342" width="80" height="36" rx="6" fill="#0b1a3d"/>
+    <rect x="456" y="353" width="44" height="14" rx="3" fill="#f28c1c"/>
+    <path d="M478 238 L483 250 L496 251 L486 259 L489 272 L478 265 L467 272 L470 259 L460 251 L473 250 Z" fill="#ffffff"/>
+  </g>
+  <path class="shine" d="M540 196 L544 208 L556 212 L544 216 L540 228 L536 216 L524 212 L536 208 Z" fill="#f6b14f"/>
+  <path class="shine2" d="M418 196 L421 204 L429 207 L421 210 L418 218 L415 210 L407 207 L415 204 Z" fill="#33b8e8"/>
+
+  <!-- tossed caps -->
+  <g class="toss">
+    <polygon points="440,96 470,82 500,96 470,110" fill="#0b1a3d"/>
+    <path d="M452 101 L452 112 Q470 120 488 112 L488 101" fill="#1f5fbf"/>
+    <path d="M470 96 L494 100 L494 116" fill="none" stroke="#f28c1c" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <g class="toss2">
+    <polygon points="520,140 544,129 568,140 544,151" fill="#12285a"/>
+    <path d="M530 144 L530 152 Q544 158 558 152 L558 144" fill="#33b8e8"/>
+  </g>
+
+  <!-- badges -->
+  <g class="float" filter="url(#sh)">
+    <rect x="40" y="96" width="150" height="56" rx="16" fill="#ffffff"/>
+    <path d="M66 108 L82 114 L82 126 Q82 138 66 144 Q50 138 50 126 L50 114 Z" fill="#1f5fbf"/>
+    <path d="M59 126 L64 131 L73 121" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="94" y="121" font-size="14" font-weight="700" fill="#12285a">Trusted</text>
+    <text x="94" y="139" font-size="12" fill="#5b6785">Guidance</text>
+  </g>
+  <g class="float2" filter="url(#sh)">
+    <rect x="214" y="72" width="128" height="50" rx="16" fill="#ffffff"/>
+    <circle cx="240" cy="97" r="14" fill="#fff1e2"/>
+    <text x="240" y="102" font-size="15" font-weight="700" fill="#f28c1c" text-anchor="middle">₹</text>
+    <text x="262" y="94" font-size="13" font-weight="700" fill="#12285a">Scholarship</text>
+    <text x="262" y="110" font-size="11" fill="#5b6785">Support</text>
+  </g>
+
+  <!-- confetti -->
+  <rect class="conf" x="410" y="60" width="6" height="10" rx="1" fill="#f28c1c"/>
+  <rect class="conf" style="animation-delay:-1.3s" x="560" y="70" width="6" height="10" rx="1" fill="#33b8e8"/>
+  <rect class="conf" style="animation-delay:-2.6s" x="500" y="50" width="6" height="10" rx="1" fill="#1f5fbf"/>
+  <circle class="conf" style="animation-delay:-.7s" cx="440" cy="150" r="3.5" fill="#f6b14f"/>
+</svg>

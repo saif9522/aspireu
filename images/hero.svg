@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" role="img" aria-label="Graduate student standing on books with a rising arrow">
+  <defs>
+    <linearGradient id="arrowGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f5fbf"/>
+      <stop offset="1" stop-color="#33b8e8"/>
+    </linearGradient>
+    <linearGradient id="gown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a6fd6"/>
+      <stop offset="1" stop-color="#163a80"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#33b8e8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#33b8e8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#06102a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:'Space Grotesk',Arial,Helvetica,sans-serif}
+    .float{animation:float 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .float2{animation:float 6s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:center}
+    .float3{animation:float 4.5s ease-in-out -1s infinite;transform-box:fill-box;transform-origin:center}
+    .student{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+    .draw{stroke-dasharray:820;stroke-dashoffset:820;animation:draw 2.2s ease-out .3s forwards}
+    .draw2{stroke-dasharray:820;stroke-dashoffset:820;animation:draw 2.4s ease-out .6s forwards}
+    .pop{animation:pop .6s cubic-bezier(.3,1.6,.5,1) 2.2s both;transform-box:fill-box;transform-origin:center}
+    .spin{animation:spin 30s linear infinite;transform-box:fill-box;transform-origin:center}
+    .tw{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .tw2{animation:tw 3s ease-in-out -1s infinite;transform-box:fill-box;transform-origin:center}
+    .tassel{animation:sway 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:top left}
+    .wave{animation:wave 2.2s ease-in-out infinite;transform-box:view-box;transform-origin:326px 214px}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes tw{0%,100%{opacity:.25;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+    @keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(8deg)}}
+    @keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-8deg)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw,.draw2{stroke-dashoffset:0}}
+  </style>
+
+  <!-- glow + orbit -->
+  <circle cx="300" cy="270" r="230" fill="url(#glow)"/>
+  <circle class="spin" cx="300" cy="270" r="205" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2" stroke-dasharray="4 12"/>
+  <circle cx="300" cy="270" r="150" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+
+  <!-- rising arrow -->
+  <path class="draw2" d="M70 470 C 230 478, 400 408, 486 168" fill="none" stroke="#f28c1c" stroke-width="7" stroke-linecap="round"/>
+  <path class="draw" d="M60 440 C 220 450, 380 380, 500 100" fill="none" stroke="url(#arrowGrad)" stroke-width="16" stroke-linecap="round"/>
+  <polygon class="pop" points="512,70 518,115 478,97" fill="#33b8e8"/>
+
+  <!-- books -->
+  <g filter="url(#sh)">
+    <rect x="170" y="440" width="260" height="34" rx="6" fill="#f28c1c"/>
+    <rect x="178" y="447" width="236" height="5" rx="2" fill="#ffd9ad"/>
+    <rect x="190" y="408" width="220" height="32" rx="6" fill="#33b8e8"/>
+    <rect x="198" y="415" width="196" height="5" rx="2" fill="#c9eefb"/>
+    <rect x="205" y="378" width="190" height="30" rx="6" fill="#ffffff"/>
+    <rect x="205" y="378" width="18" height="30" rx="4" fill="#12285a"/>
+    <rect x="232" y="389" width="140" height="4" rx="2" fill="#dbe4f4"/>
+  </g>
+
+  <!-- student -->
+  <g class="student">
+    <rect x="284" y="328" width="13" height="48" rx="5" fill="#0b1a3d"/>
+    <rect x="303" y="328" width="13" height="48" rx="5" fill="#0b1a3d"/>
+    <ellipse cx="289" cy="377" rx="13" ry="5" fill="#0b1a3d"/>
+    <ellipse cx="311" cy="377" rx="13" ry="5" fill="#0b1a3d"/>
+    <path d="M260 334 L272 210 Q300 196 328 210 L340 334 Z" fill="url(#gown)"/>
+    <path d="M288 206 L300 230 L312 206 Z" fill="#ffffff"/>
+    <path d="M286 210 L281 304 L292 304 L296 220 Z" fill="#f28c1c"/>
+    <path d="M314 210 L319 304 L308 304 L304 220 Z" fill="#f28c1c"/>
+    <!-- left arm + diploma -->
+    <path d="M274 216 Q262 252 262 288" fill="none" stroke="#2a6fd6" stroke-width="18" stroke-linecap="round"/>
+    <g transform="rotate(-22 250 298)">
+      <rect x="226" y="291" width="48" height="13" rx="6.5" fill="#ffffff"/>
+      <rect x="246" y="291" width="7" height="13" fill="#f28c1c"/>
+    </g>
+    <circle cx="262" cy="292" r="8" fill="#f1c7a0"/>
+    <!-- right arm raised -->
+    <g class="wave">
+      <path d="M326 216 Q352 182 356 142" fill="none" stroke="#2a6fd6" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="356" cy="134" r="9" fill="#f1c7a0"/>
+    </g>
+    <!-- head -->
+    <rect x="293" y="184" width="14" height="18" rx="4" fill="#e3ad85"/>
+    <circle cx="300" cy="168" r="24" fill="#f1c7a0"/>
+    <path d="M276 168 Q275 142 300 141 Q325 142 324 168 Q316 155 300 155 Q284 155 276 168 Z" fill="#2b1d14"/>
+    <circle cx="292" cy="171" r="2.3" fill="#2b1d14"/>
+    <circle cx="308" cy="171" r="2.3" fill="#2b1d14"/>
+    <path d="M292 180 Q300 188 308 180" fill="none" stroke="#2b1d14" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="286" cy="178" r="3.5" fill="#f3a38c" opacity=".6"/>
+    <circle cx="314" cy="178" r="3.5" fill="#f3a38c" opacity=".6"/>
+    <!-- cap -->
+    <path d="M284 150 L284 160 Q300 168 316 160 L316 150 Z" fill="#12285a"/>
+    <polygon points="266,146 300,131 334,146 300,161" fill="#0b1a3d"/>
+    <g class="tassel">
+      <path d="M300 146 L328 150 L330 172" fill="none" stroke="#f28c1c" stroke-width="2.6" stroke-linecap="round"/>
+      <rect x="326" y="170" width="8" height="12" rx="2" fill="#f28c1c"/>
+    </g>
+  </g>
+
+  <!-- floating card: admission confirmed -->
+  <g class="float" filter="url(#sh)">
+    <rect x="30" y="150" width="200" height="62" rx="16" fill="#ffffff"/>
+    <circle cx="62" cy="181" r="16" fill="#22c55e"/>
+    <path d="M54 181 L60 187 L71 175" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="88" y="177" font-size="15" font-weight="700" fill="#12285a">Admission</text>
+    <text x="88" y="197" font-size="12.5" fill="#5b6785">Confirmed ✓</text>
+  </g>
+
+  <!-- floating card: partners -->
+  <g class="float2" filter="url(#sh)">
+    <rect x="378" y="320" width="164" height="64" rx="16" fill="#ffffff"/>
+    <circle cx="410" cy="352" r="17" fill="#fff1e2"/>
+    <path d="M400 360 L400 350 L410 344 L420 350 L420 360 Z M404 360 L404 353 M410 360 L410 353 M416 360 L416 353" fill="none" stroke="#f28c1c" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="436" y="350" font-size="19" font-weight="700" fill="#f28c1c">10+</text>
+    <text x="436" y="370" font-size="12" fill="#5b6785">Partner Colleges</text>
+  </g>
+
+  <!-- floating icon: book -->
+  <g class="float3" filter="url(#sh)">
+    <circle cx="96" cy="320" r="28" fill="#ffffff"/>
+    <path d="M82 310 Q90 306 96 312 Q102 306 110 310 L110 330 Q102 326 96 332 Q90 326 82 330 Z" fill="#33b8e8"/>
+    <path d="M96 312 L96 332" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- floating icon: star -->
+  <g class="float" filter="url(#sh)">
+    <circle cx="420" cy="140" r="24" fill="#ffffff"/>
+    <path d="M420 127 L424 136 L434 137 L426 143 L429 153 L420 147 L411 153 L414 143 L406 137 L416 136 Z" fill="#f28c1c"/>
+  </g>
+
+  <!-- sparkles -->
+  <path class="tw" d="M180 90 L184 102 L196 106 L184 110 L180 122 L176 110 L164 106 L176 102 Z" fill="#ffffff"/>
+  <path class="tw2" d="M470 250 L473 258 L481 261 L473 264 L470 272 L467 264 L459 261 L467 258 Z" fill="#33b8e8"/>
+  <path class="tw" d="M60 250 L62 256 L68 258 L62 260 L60 266 L58 260 L52 258 L58 256 Z" fill="#f28c1c"/>
+  <circle class="tw2" cx="250" cy="70" r="4" fill="#ffffff"/>
+  <circle class="tw" cx="520" cy="420" r="5" fill="#f28c1c"/>
+</svg>

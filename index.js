@@ -106,12 +106,12 @@ if ('IntersectionObserver' in window) {
   bars.forEach((b) => b.classList.add('in-bar'));
 }
 
-/* ---------- enquiry form → aspireu02026@gmail.com ---------- */
+/* ---------- enquiry form → aspireu2026@gmail.com ---------- */
 /* Sent through FormSubmit (formsubmit.co). Works only when the site is opened from a
    real web address (Vercel etc.), not by double-clicking index.html on a computer.
-   The very first enquiry sends an "Activate Form" email to aspireu02026@gmail.com;
+   The very first enquiry sends an "Activate Form" email to aspireu2026@gmail.com;
    click it once and every enquiry after that arrives in that inbox. */
-const FORM_EMAIL = 'aspireu02026@gmail.com';
+const FORM_EMAIL = 'aspireu2026@gmail.com';
 const form = document.getElementById('enquiryForm');
 const statusEl = form.querySelector('.form-status');
 const submitBtn = form.querySelector('.btn-submit');
